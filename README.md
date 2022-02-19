@@ -19,9 +19,9 @@ This file requires several tools to be installed in the VBA project. To turn on 
 ### Naming
 As with all VBA applications, the consistent naming of modules, subprocedures, sheets, excel list objects, and excel table headers are important for function. If you change the naming or column header of one table, it can be difficult to know where else that name needs to be changed for the macros to function properly. It is advised that you keep as much close to the original as possible to maintain 100% functionality. That being said, there are procedures in place to allow renaming of a few columns within the main data table. More on that below.
 
-### Contents
+## Contents
 
-##### Control Center
+### Control Center
 
 This is the sheet that houses the buttons that either activate or prompt userforms to enter data, create reports, or alter formatting. The macros consist of:
 - Create Calendar
@@ -39,7 +39,7 @@ This is the sheet that houses the buttons that either activate or prompt userfor
 - Update Countermeasures
   - A macro that reverts the main data table to the original format
 
-##### Countermeasures
+### Countermeasures
 
 The most important sheet is the "Countermeasures" sheet. On this sheet is a table named "Tbl_Counter." This table will hold all of the facilities/MDI data that needs to be stored, tracked, and trended. Each column maintains different information, and some columns allow multiple pieces of information to be stored. Some columns also have dynamic data validaton. The columns, a short description, their data type, their format, their validation properties, their naming convention, and an example are located in the table below.
 
@@ -76,7 +76,7 @@ The most important sheet is the "Countermeasures" sheet. On this sheet is a tabl
 | On Time? | If days completed < days until due -> “Yes” | “Yes,” “No” | No | No | No |
 | Early and Overdue Differential    | (-/+). (-) means entry closed before due date. (+) means entry closed after due date.    | “-4,” “2” | No | No    | No    |
 
-#### Data Validation
+### Data Validation
 Some columns (as explained abov) have data validation. But the data validation in this program is unique as it is dynamic. It is not designed to ensure that users are inputting one possible answer of a list of valid inputs. The list can be changed at will. 
 
 In order to activate the data validation for a cell in a column, simply double click the cell. After double clicking, the cell will be anchored with a data validated drop down list consisting of all the other entries within that column. Having the data validation list active will not allow the user to enter something not within that list. To de-activate the dat validation, simply right click on the cell. Right clicking will not get rid of the contents of the cell, allowing the user immense flexibility in organizing entries for a particular column.
@@ -132,7 +132,25 @@ These sheets are generated from calling the "Create Pivot Table" macro. Dependin
 ### Data Validation
 It is imperative for this sheet to remain generally untouched. The data validation functionality of the Countermeasures sheet relies on this sheet to be named "Data Validation." No other contents should be manually added to this sheet as the sheet will autopopulate based on the data validation use on the main data table.
 
+### Other Important Things to Know
+When activating the "Input New Entries" the form requires the following inputs/formats to be entered for successful entry:
 
+| Entry | DataType |
+|---|---|
+| Issue Date - Day | DD |
+| Issue Date - Month | String |
+| Issue Date - Year | YYYY |
+| Category | String |
+| KPI | String |
+| Issue | String |
+| Cause | String |
+| Due Date - Day | MM |
+| Due Date - Month | String |
+| Due Date - Year | YYYY |
+| Owner - First Name | String |
+| Owner - Last Name | String |
+
+Additionally, the "Category" drop down is autopopulated from main data table, but different entries can be manually input here as well. The "KPI", and all the tag and descriptor drop downs are populated from previous entries of that selected category. Of course, new entries can be manually input as well.
 
 
 
