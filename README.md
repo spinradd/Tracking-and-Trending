@@ -76,6 +76,13 @@ The most important sheet is the "Countermeasures" sheet. On this sheet is a tabl
 | On Time? | If days completed < days until due -> “Yes” | “Yes,” “No” | No | No | No |
 | Early and Overdue Differential    | (-/+). (-) means entry closed before due date. (+) means entry closed after due date.    | “-4,” “2” | No | No    | No    |
 
+#### Data Validation
+Some columns (as explained abov) have data validation. But the data validation in this program is unique as it is dynamic. It is not designed to ensure that users are inputting one possible answer of a list of valid inputs. The list can be changed at will. 
+
+In order to activate the data validation for a cell in a column, simply double click the cell. After double clicking, the cell will be anchored with a data validated drop down list consisting of all the other entries within that column. Having the data validation list active will not allow the user to enter something not within that list. To de-activate the dat validation, simply right click on the cell. Right clicking will not get rid of the contents of the cell, allowing the user immense flexibility in organizing entries for a particular column.
+
+If you wish to add something to the drop down list, simply add it to your intended cell. When you activate the data validation afterwards, your new entry will be embedded in the list.
+
 ### Tag and Descriptor Tables
 
 This sheet contains a generated report that consists of data from a user-specified time interval. The sheet lays out in four sections horizontal of one another. All sections are color coordinated with a key at the top of each section. The sections are:
@@ -100,6 +107,37 @@ A section with depicting the categorys and KPIs used and their frequency through
 **Other Identifiers**
 
 A section containing all the other identifiers that were used and their frequency throughout the user-specified time interval.
+
+_Tag Search Feature:_
+
+On the left of the sheet is a button labeled "Test for Tag." In this cell, you can type words and if you press the button it will show you exact matches and matches partially containging your query below it, and where on the sheet it is located.
+
+### Calendar Sheets
+
+After running the Calendar macro, you will generate a very typical looking yearly calendar that has red and green cells. Red cells indicate that there was a data entry for the date of the cell. Green cells indicate there was no entry. 
+
+At the top of the calendar (which is on a frozen pane) you can see what KPI's were potentially hit to change the cell's color. To the left of that is an "Update" button. In rder to not have to remake the Calendar every day, click the update button and it will refresh the calendars cells with the correct dates from the main data table.
+
+### KPI Charts
+
+Running the KPI Carts macro will generate a KPI Charts sheet with three main sections.
+
+1. At the top will be a summarized chart of the KPIs that were hit for a choisen category over a chosen interval of time.
+2. Directly below that are monthly charts indicating the exact days where a KPI was hit, if there was one, up to 10 total KPIs in one day.
+3. To the right of section 1 will be a chart depicting the running total of KPIs hit over the specific time interval.
+
+### Running Total Table and Trend Table
+These sheets are generated from calling the "Create Pivot Table" macro. Depending on which the user selects, a sheet will be generated depicting a pivot table and a pivot chart of the desired information.
+
+### Data Validation
+It is imperative for this sheet to remain generally untouched. The data validation functionality of the Countermeasures sheet relies on this sheet to be named "Data Validation." No other contents should be manually added to this sheet as the sheet will autopopulate based on the data validation use on the main data table.
+
+
+
+
+
+
+
 
 
 
