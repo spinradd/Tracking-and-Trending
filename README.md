@@ -77,11 +77,11 @@ The most important sheet is the "Countermeasures" sheet. On this sheet is a tabl
 | Early and Overdue Differential    | (-/+). (-) means entry closed before due date. (+) means entry closed after due date.    | “-4,” “2” | No | No    | No    |
 
 ### Data Validation
-Some columns (as explained abov) have data validation. But the data validation in this program is unique as it is dynamic. It is not designed to ensure that users are inputting one possible answer of a list of valid inputs. The list can be changed at will. 
+Some columns (as explained above) have data validation. But the data validation in this program is unique as it is dynamic. It is not designed to ensure that users are inputting one possible answer of a list of valid inputs. The list can be changed at will. 
 
 In order to activate the data validation for a cell in a column, simply double click the cell. After double clicking, the cell will be anchored with a data validated drop down list consisting of all the other entries within that column. Having the data validation list active will not allow the user to enter something not within that list. To de-activate the dat validation, simply right click on the cell. Right clicking will not get rid of the contents of the cell, allowing the user immense flexibility in organizing entries for a particular column.
 
-If you wish to add something to the drop down list, simply add it to your intended cell. When you activate the data validation afterwards, your new entry will be embedded in the list.
+If you wish to add something to the drop down list, simply add it to your intended cell (with data validation disabled) and hit enter. When you activate the data validation afterwards your new entry will be embedded in the list.
 
 ### Tag and Descriptor Tables
 
