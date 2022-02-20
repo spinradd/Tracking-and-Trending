@@ -92,21 +92,23 @@ This sheet contains a generated report that consists of data from a user-specifi
 - Category and KPIs
 - Other Identifiers
 
+Again, all sections contain data from the user specified interval.
+
 **All Tags**
 
-This section of the sheet contains all the different tags used in tag columns as well as the frequency of their use, throughout the user-specified time interval.
+This section of the sheet contains all the different tags used in tag columns as well as the frequency of their use.
 
 **Tags by Category**
 
-This section depicts charts the same as in the "All Tags" section, but it seperates contents based on the category where that tag was used, throughout the user-specified time interval.
+This section depicts charts the same as in the "All Tags" section, but it seperates contents based on the category where that tag was used.
 
 **Category and KPIs***
 
-A section with depicting the categorys and KPIs used and their frequency throughout the user-specified time interval.
+A section with depicting the categorys and KPIs used and their frequency.
 
 **Other Identifiers**
 
-A section containing all the other identifiers that were used and their frequency throughout the user-specified time interval.
+A section containing all the other identifiers that were used and their frequency.
 
 _Tag Search Feature:_
 
