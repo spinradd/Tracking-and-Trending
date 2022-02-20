@@ -29,13 +29,13 @@ This is the sheet that houses the buttons that either activate or prompt userfor
 - Create KPI Charts
   - A report that creates a sheet and subsequent graph, which depicts what KPIs were hit over a interval of the users choice.
 - Create Tag and Descriptors
-  - A report that compiles all the tags, categories, KPIs, and other identifiers that were recorded in the MFDI data table over an interval of the users choice.
+  - A report that compiles all the tags, categories, KPIs, and other identifiers that were recorded in the MDI data table over an interval of the users choice.
 - Create Pivot Chart
   - A report that creates a pivot chart based on the users choice of a column of the main data table. Features include filtering by category, by total occurances of the event, and displaying the graph as a bar chart or running total.
 - Generate Report
   - A report that transfers data from a user specified interval from the main data table to a powerpoint presentation. A static ppt template file must be present in an adjacent folder for success. Details on implementation below.
 - Add New Entries
-  - Generates a user-input form to streamline data entry to the main data table. Features include data validation and error handling.
+  - Generates a user-input form to streamline data entry to the main data table. Features include dynamic drop down lists and error handling.
 - Update Countermeasures
   - A macro that reverts the main data table to the original format
 
@@ -112,7 +112,7 @@ A section containing all the other identifiers that were used and their frequenc
 
 _Tag Search Feature:_
 
-On the left of the sheet is a button labeled "Test for Tag." In this cell, you can type words and if you press the button it will show you exact matches and matches partially containging your query below it, and where on the sheet it is located.
+On the left of the sheet is a button labeled "Test for Tag." In this cell, you can type words and if you press the button it will show you exact matches and matches partially containing your query below it, and where on the sheet it is located.
 
 ### Calendar Sheets
 
@@ -135,6 +135,8 @@ These sheets are generated from calling the "Create Pivot Table" macro. Dependin
 It is imperative for this sheet to remain generally untouched. The data validation functionality of the Countermeasures sheet relies on this sheet to be named "Data Validation." No other contents should be manually added to this sheet as the sheet will autopopulate based on the data validation use on the main data table.
 
 ### Other Important Things to Know
+
+#### Required User Input
 When activating the "Input New Entries" the form requires the following inputs/formats to be entered for successful entry:
 
 | Entry | DataType |
@@ -154,7 +156,10 @@ When activating the "Input New Entries" the form requires the following inputs/f
 
 Additionally, the "Category" drop down is autopopulated from main data table, but different entries can be manually input here as well. The "KPI", and all the tag and descriptor drop downs are populated from previous entries of that selected category. Of course, new entries can be manually input as well.
 
+#### Powerpoint ppt file location
+The "Create Report" macro creates a powertpoint report of MDI data over a specific period of time. Obviously, access to powertpoint is needed for this macro to run successfully. Additionally, the macro requires the file path of a .potx (Powerpoint Template) file.
 
+In The CreatePPT Module >> create_ppt subroutine, scroll down and you will see a comment " 'link new powerpoint presentation to template." Direclty bwlow that you will see the string ti ut the file path of the .potx file.
 
 
 
