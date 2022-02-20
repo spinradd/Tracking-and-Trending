@@ -1,6 +1,8 @@
 # Tracking and Trending
 A VBA application designed to optimize input and analysis of facilities or otherwise categorical data. Optimal for maintenance for daily improvement (MDI) practices.
 
+This README.md functions as a compact overview of the application. A more detailed documentation, (with images) exists inside the repository as a .docx file.
+
 ## Purpose
 This file is designed to help input, maintain, and interpret MDI data. Data validation macros and user-forms help maintain data integrity and consistency. Data analysis macros can create calendars, reports, tables, and graphs. 
 
