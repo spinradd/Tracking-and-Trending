@@ -159,7 +159,7 @@ Additionally, the "Category" drop down is autopopulated from main data table, bu
 #### Powerpoint ppt file location
 The "Create Report" macro creates a powertpoint report of MDI data over a specific period of time. Obviously, access to powertpoint is needed for this macro to run successfully. Additionally, the macro requires the file path of a .potx (Powerpoint Template) file.
 
-In The CreatePPT Module >> create_ppt subroutine, scroll down and you will see a comment " 'link new powerpoint presentation to template." Direclty bwlow that you will see the string ti ut the file path of the .potx file.
+In The CreatePPT Module >> create_ppt subroutine, scroll down and you will see a comment " 'link new powerpoint presentation to template." Direclty bwlow that you will see the string to input the file path of the .potx file.
 
 
 
