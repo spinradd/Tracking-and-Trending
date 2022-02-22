@@ -1,4 +1,3 @@
-Attribute VB_Name = "Functions_M"
 
 Public Function Count_array(arr_to_count As Variant) As Scripting.Dictionary 'nums = 1D array
 '1D array is turned into a dictionary with its Key as the contents of the array,
@@ -70,9 +69,14 @@ Public Function Create_unique_arr(ByVal original_arr As Variant) As Collection '
     On Error Resume Next
 
     For Each raw_val In original_arr
+        
         individual_val = Trim(raw_val)
+        
         If individual_val = "" Then GoTo NextValue
-        unique_arr.Add individual_val, individual_val
+        
+        Else:
+            unique_arr.Add individual_val, individual_val
+
 NextValue:
     Next raw_val
 
@@ -321,34 +325,18 @@ Set Dict = TempDict
 End Sub
 
 
-Public Function FSOGetFileName(Path As String, Extension As Boolean)
-    Dim FileName As String
-    Dim FSO As New FileSystemObject
-    Set FSO = CreateObject("Scripting.FileSystemObject")
- 
-    If Extension = True Then
-    'Get File Name
-    FileName = FSO.GetFileName(Path)
-    Else
-    'Get File Name no Extension
-    FileName = FSO.GetFileName(Path)
-    FileName = left(FileName, InStr(FileName, ".") - 1)
-    End If
-    
-    FSOGetFileName = FileName
-    
- 
-End Function
-
 Public Function Is_form_open(form_name As String) As Boolean
+
 Dim form As Object
+
+Is_form_open = False
+
 For Each form In VBA.UserForms
     If form.Name = form_name Then
         Is_form_open = True
-        Exit Function
     End If
 Next form
-Is_form_open = False
+
 End Function
 
 Public Function DoesArrayExist(Arr() As Variant) As Variant
